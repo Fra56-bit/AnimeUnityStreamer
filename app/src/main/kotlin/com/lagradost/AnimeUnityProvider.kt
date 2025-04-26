@@ -10,7 +10,21 @@ import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.LoadResponse.Companion.addTrailer
 import org.jsoup.nodes.Element
 
+/**
+ * AnimeUnity Provider for CloudStream 3
+ *
+ * This provider integrates AnimeUnity.tv, an Italian anime streaming website,
+ * into the CloudStream 3 app. It handles searching, browsing, and streaming anime content.
+ *
+ * Features:
+ * - Main page with latest episodes, popular anime, and ongoing series
+ * - Search functionality
+ * - Episode extraction with quality options
+ * - Subtitle support
+ * - Italian language content
+ */
 class AnimeUnityProvider : MainAPI() {
+    // Base configuration
     override var mainUrl = "https://www.animeunity.tv"
     override var name = "AnimeUnity"
     override val hasMainPage = true
@@ -22,7 +36,7 @@ class AnimeUnityProvider : MainAPI() {
         private const val TAG = "AnimeUnity"
     }
 
-    // Icon shown in the app
+    // UI elements - Custom icons for the provider in CloudStream's interface
     override var iconId = R.drawable.ic_animeunity
     override var iconBackgroundId = R.drawable.ic_animeunity_background
 

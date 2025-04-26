@@ -1,0 +1,8 @@
+# This is an example local.properties file.
+# Create a copy named 'local.properties' and update the paths for your system.
+
+# Path to the Android SDK on your system
+sdk.dir=/path/to/your/android/sdk
+
+# Optional: Path to specific Android SDK tools (if needed)
+ndk.dir=/path/to/your/android/ndk

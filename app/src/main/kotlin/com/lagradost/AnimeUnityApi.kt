@@ -5,10 +5,26 @@ import com.lagradost.cloudstream3.utils.AppUtils.parseJson
 import okhttp3.Headers
 import org.jsoup.Jsoup
 
+/**
+ * AnimeUnity API Client
+ *
+ * This object provides methods to interact with the AnimeUnity API.
+ * It handles all API requests, authentication, and data parsing.
+ * 
+ * The API client supports:
+ * - Searching for anime by name
+ * - Retrieving anime details
+ * - Getting episode information
+ * - Fetching latest episodes
+ *
+ * Note: This uses a combination of screen scraping and API endpoints
+ * as AnimeUnity doesn't provide a complete public API.
+ */
 object AnimeUnityApi {
     private const val mainUrl = "https://www.animeunity.tv"
     private const val apiUrl = "$mainUrl/api"
     
+    // Standard headers for all requests to avoid detection as a bot
     private val headers = Headers.Builder()
         .add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
         .add("Referer", mainUrl)

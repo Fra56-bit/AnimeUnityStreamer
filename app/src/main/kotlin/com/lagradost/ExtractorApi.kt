@@ -7,14 +7,41 @@ import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.utils.M3u8Helper
 
+/**
+ * AnimeUnity Video Extractor
+ *
+ * This class handles the extraction of video streams from AnimeUnity's website.
+ * It can process various types of video sources:
+ * - HLS (m3u8) streams from SCWS server
+ * - Direct MP4 links
+ * - Embedded video players
+ * - Multiple quality options
+ *
+ * The extractor supports CloudStream 3's standard extraction API and 
+ * properly handles referer headers to avoid blocking.
+ */
 class AnimeUnityExtractor : ExtractorApi() {
     override var name = "AnimeUnity"
     override var mainUrl = "https://www.animeunity.tv"
     
+    // AnimeUnity requires a referer header to verify requests
     override val requiresReferer = true
 
     private val TAG = "AnimeUnityExtractor"
 
+    /**
+     * Main extraction method that processes video URLs and returns playable links
+     *
+     * This method handles different source types from AnimeUnity:
+     * 1. HLS streams from the SCWS server (m3u8)
+     * 2. Direct MP4 links 
+     * 3. HTML5 video elements in the page
+     * 4. Iframe embedded players
+     *
+     * @param url The source URL to extract from
+     * @param referer The referer URL needed for the request (prevents 403 errors)
+     * @return List of extracted video links with quality information
+     */
     override suspend fun getUrl(url: String, referer: String?): List<ExtractorLink> {
         val extractedLinks = mutableListOf<ExtractorLink>()
         
