@@ -1,0 +1,24 @@
+{
+  "name": "AnimeUnity",
+  "version": "1.0.0",
+  "url": "https://raw.githubusercontent.com/YOUR_USERNAME/REPOSITORY_NAME/main/",
+  "source": "https://www.animeunity.to",
+  "description": "AnimeUnity Plugin for CloudStream 3",
+  "author": "YOUR_NAME",
+  "repositories": [
+    {
+      "name": "AnimeUnity Repository",
+      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/REPOSITORY_NAME/main/"
+    }
+  ],
+  "classPath": "com.lagradost.AnimeUnityPlugin",
+  "language": "it",
+  "apiVersion": 1,
+  "status": "stable",
+  "features": {
+    "search": true,
+    "subtitles": true,
+    "quality_settings": true,
+    "stream_selection": true
+  }
+}
