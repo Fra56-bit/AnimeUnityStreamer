@@ -1,14 +1,14 @@
 {
   "name": "AnimeUnity",
   "version": "1.0.0",
-  "url": "https://raw.githubusercontent.com/your-github-username/animeunity-cs3/main/",
+  "url": "https://raw.githubusercontent.com/your-github-username/AnimeUnityStreamer/main/",
   "source": "https://www.animeunity.to",
   "description": "AnimeUnity Plugin for CloudStream 3",
   "author": "Your Name",
   "repositories": [
     {
       "name": "AnimeUnity Repository",
-      "url": "https://raw.githubusercontent.com/your-github-username/animeunity-cs3/main/"
+      "url": "https://raw.githubusercontent.com/your-github-username/AnimeUnityStreamer/main/"
     }
   ],
   "classPath": "com.lagradost.AnimeUnityPlugin",
