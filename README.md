@@ -16,9 +16,8 @@ A CloudStream 3 plugin that integrates AnimeUnity's (animeunity.to) anime librar
 2. Go to Settings > Extensions
 3. Click on "Repositories" and add the repository URL:
    ```
-   https://raw.githubusercontent.com/YOUR_USERNAME/REPOSITORY_NAME/main/
+   https://raw.githubusercontent.com/your-github-username/animeunity-cs3/main/
    ```
-   (Replace YOUR_USERNAME and REPOSITORY_NAME with your actual GitHub username and repository name)
 4. Install the AnimeUnity plugin from the available extensions
 5. Restart CloudStream 3
 
