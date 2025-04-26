@@ -1,0 +1,40 @@
+modules = ["kotlin"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["jdk", "gradle"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "GradleBuild"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "build_animeunity_plugin"
+
+[[workflows.workflow]]
+name = "GradleBuild"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "chmod +x ./gradlew && ./gradlew :app:assembleDebug"
+
+[[workflows.workflow]]
+name = "build_animeunity_plugin"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "chmod +x ./gradlew && ./gradlew assembleDebug"
+
+[deployment]
+run = ["sh", "-c", "chmod +x ./gradlew && ./gradlew :app:assembleDebug"]
