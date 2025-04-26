@@ -8,7 +8,7 @@ import org.jsoup.Jsoup
 /**
  * AnimeUnity API Client
  *
- * This object provides methods to interact with the AnimeUnity API.
+ * This object provides methods to interact with the AnimeUnity.to API.
  * It handles all API requests, authentication, and data parsing.
  * 
  * The API client supports:
@@ -21,7 +21,7 @@ import org.jsoup.Jsoup
  * as AnimeUnity doesn't provide a complete public API.
  */
 object AnimeUnityApi {
-    private const val mainUrl = "https://www.animeunity.tv"
+    private const val mainUrl = "https://www.animeunity.to"
     private const val apiUrl = "$mainUrl/api"
     
     // Standard headers for all requests to avoid detection as a bot

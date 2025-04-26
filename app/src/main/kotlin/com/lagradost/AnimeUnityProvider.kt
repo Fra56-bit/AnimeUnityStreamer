@@ -13,7 +13,7 @@ import org.jsoup.nodes.Element
 /**
  * AnimeUnity Provider for CloudStream 3
  *
- * This provider integrates AnimeUnity.tv, an Italian anime streaming website,
+ * This provider integrates AnimeUnity.to, an Italian anime streaming website,
  * into the CloudStream 3 app. It handles searching, browsing, and streaming anime content.
  *
  * Features:
@@ -25,7 +25,7 @@ import org.jsoup.nodes.Element
  */
 class AnimeUnityProvider : MainAPI() {
     // Base configuration
-    override var mainUrl = "https://www.animeunity.tv"
+    override var mainUrl = "https://www.animeunity.to"
     override var name = "AnimeUnity"
     override val hasMainPage = true
     override var lang = "it"

@@ -1,6 +1,6 @@
 # AnimeUnity Plugin for CloudStream 3
 
-A CloudStream 3 plugin that integrates AnimeUnity's anime library with powerful streaming capabilities.
+A CloudStream 3 plugin that integrates AnimeUnity's (animeunity.to) anime library with powerful streaming capabilities.
 
 ## Features
 
@@ -40,4 +40,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Disclaimer
 
-This plugin is not affiliated with or endorsed by AnimeUnity. It is an independent project created for educational purposes and personal use within the CloudStream 3 ecosystem.
+This plugin is not affiliated with or endorsed by AnimeUnity.to. It is an independent project created for educational purposes and personal use within the CloudStream 3 ecosystem.
