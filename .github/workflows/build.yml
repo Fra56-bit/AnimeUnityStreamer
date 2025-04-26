@@ -1,0 +1,47 @@
+name: Build AnimeUnity Plugin
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+          
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+        
+      - name: Build with Gradle
+        run: ./gradlew assembleDebug
+        
+      - name: Create builds directory
+        run: mkdir -p builds
+        
+      - name: Zip APK
+        run: zip -j builds/AnimeUnity.zip app/build/outputs/apk/debug/app-debug.apk
+        
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: AnimeUnity Plugin
+          path: builds/AnimeUnity.zip
+          
+      - name: Commit and push if changes
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'github-actions@github.com'
+          git add builds/AnimeUnity.zip
+          git commit -m "Build and update plugin APK" || echo "No changes to commit"
+          git push

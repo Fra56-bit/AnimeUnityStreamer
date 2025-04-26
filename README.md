@@ -29,6 +29,17 @@ This plugin is developed using Kotlin and follows the CloudStream 3 plugin archi
 2. Make changes to the Kotlin files in the `app/src/main` directory
 3. Build using Gradle: `./gradlew assembleDebug`
 4. The output APK will be in `app/build/outputs/apk/debug/`
+5. Compress the APK into a ZIP file named `AnimeUnity.zip`
+6. Place the ZIP file in the `builds` directory
+
+### Automatic Building
+
+This repository uses GitHub Actions to automatically build the plugin when changes are pushed to the main branch. The workflow:
+
+1. Compiles the plugin using Gradle
+2. Creates the `AnimeUnity.zip` file
+3. Updates the file in the `builds` directory
+4. Makes the compiled plugin available for download
 
 ## Structure
 
