@@ -3,6 +3,6 @@
   "description": "Repository per il plugin AnimeUnity per CloudStream 3",
   "manifestVersion": 1,
   "pluginLists": [
-    "https://raw.githubusercontent.com/your-github-username/AnimeUnityStreamer/main/plugins.json"
+    "https://raw.githubusercontent.com/Fra56-bit/AnimeUnityStreamer/main/plugins.json"
   ]
 }
