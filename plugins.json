@@ -2,15 +2,15 @@
   {
     "name": "AnimeUnity",
     "description": "AnimeUnity Plugin per CloudStream 3",
-    "repositoryUrl": "https://raw.githubusercontent.com/your-github-username/AnimeUnityStreamer/main",
+    "repositoryUrl": "https://raw.githubusercontent.com/Fra56-bit/AnimeUnityStreamer/main",
     "version": "1.0.0",
     "apiVersion": 1,
     "language": "it",
     "status": "stable",
-    "authors": ["Your Name"],
+    "authors": ["Fra56-bit"],
     "files": {
       "fileName": "AnimeUnity.zip",
-      "downloadUrl": "https://raw.githubusercontent.com/your-github-username/AnimeUnityStreamer/main/builds/AnimeUnity.zip"
+      "downloadUrl": "https://raw.githubusercontent.com/Fra56-bit/AnimeUnityStreamer/main/builds/AnimeUnity.zip"
     }
   }
 ]
